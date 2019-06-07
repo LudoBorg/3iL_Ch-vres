@@ -1,0 +1,640 @@
+html {
+  background-color: lightgrey;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin : 0;
+}
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+}
+
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+}
+label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: block;
+}
+header {
+  background-image: url(http://localhost/ProjetsWeb/Web/img/montagnes_backheader.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  font-size : 24px;
+  margin: 0;
+  max-height: 22%;
+}
+
+section{
+  margin-top: 10px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 0; /*header collé en haut de page*/
+  margin-bottom: 15px; 
+  text-shadow: 1px 1px 2px black, 0 0 1em blue;
+}
+/*Messages Informations*/
+#success{
+  text-align: center;
+  background-color: #90EE90;
+  color:#666;
+  border-radius:10px;
+  border:1px solid #fff;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding-right:15px;
+  padding-left:15px;
+}
+#error{
+  text-align: center;
+  background-color: red;
+  color:#666;
+  border-radius:10px;
+  border:1px solid #fff;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding-right:15px;
+  padding-left:15px;
+}
+/*Fin Messages Informations*/
+/*Page Index*/
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 80%;
+}
+.right {
+  width: 20%;
+}
+
+.row {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media screen and (max-width: 640px) {
+  .column {
+    float: none;
+    width: 90%;
+    margin:auto;
+  }
+  .row {
+    display:block;
+    margin: auto;
+  }
+#modifier {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 10px 0px; /*hauteur du bouton*/
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  }
+#supprimer {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 10px 0px; /*hauteur du bouton*/
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  }
+}
+#accueil{
+  background-color: #eee;
+  color:#666;
+  border-radius:10px;
+  border:1px solid #fff;
+  text-align:justify;
+  padding-right:15px;
+  padding-left:15px;
+}
+#accueil2{
+  background-color: #eee;
+  color:#666;
+  width: 100%;
+  border-radius:10px;
+  border:1px solid #fff;
+  text-align:justify;
+  padding-right:15px;
+  padding-left:15px;
+}
+
+#ajouter{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 90%;
+  background-color: green;
+  color: white;
+  padding: 10px 0px; /*hauteur du bouton*/
+  margin: auto;
+  margin-left: 5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#modifier input {
+  display: none;
+}
+#modifier{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: darkorange;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px 0px; /*hauteur du bouton*/
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#modifierindex{
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: darkorange;
+  color: white;
+  padding: 14px 0px; /*hauteur du bouton*/
+  margin: 10px 0; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px #999;
+  font-weight: bold;
+  display: inline-block;
+}
+#supprimer{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 10px 0px; /*hauteur du bouton*/
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#supprimerindex{
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 0px; /*hauteur du bouton*/
+  margin: 10px 0; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px #999;
+  font-weight: bold;
+  display: inline-block;
+}
+/*Fin Page Index*/
+/*Page Déconnexion*/
+#déconnexion{
+  display: inline-block;
+  text-decoration: none;
+  position: absolute;
+  right: 5%;
+  top:2%;
+  width:50px;
+  height:50px;
+  background:#fafafa;
+  box-shadow:2px 2px 8px #aaa;
+  border-radius:100%;
+  color:#555;
+}
+@media screen and (max-width: 640px){ /*Pour un petit écran*/
+  #déconnexion {
+  display: inline-block;
+  text-decoration: none;
+  position: absolute;
+  right: 3%;
+  top:2%;
+  width:25px;
+  height:25px;
+  background:#fafafa;
+  box-shadow:2px 2px 8px #aaa;
+  border-radius:100%;
+  color:#555;
+}
+}
+/*Fin de Page Déconexion*/
+/*Partie Navigation*/
+nav {
+  padding : 1px 1em 1px 0;
+  list-style-type : none;
+  background-color: #4b4b69;
+  font-weight : bold;
+  font-size : 0.8em;
+ }
+ul{
+  text-align: center;
+  list-style: none;
+ }
+li {
+  display: inline;
+  padding : 5px 0;
+  text-align: center;
+}
+li a {
+  padding : 2px 1em 2px 1em;
+  color: white;
+  text-decoration: none; /* Pour que les liens ne soient pas soulignés */
+  border-left: 1px solid #fff;
+}
+#border-right {
+  border-right: 1px solid #fff;
+}
+li a:hover {
+  color: #d9d940;
+}
+@media screen and (max-width: 640px){ /*Pour un petit écran, la nav se fait en colonne*/
+  li a {
+    display: block;
+    width: 100%;
+    border-left: none;
+    padding: 0;
+  }
+  #border-right{
+    border-right: none;
+  }
+}
+/*Fin Partie Navigation*/
+/*Partie Contact*/
+#p_contact{
+  text-align: center;
+  margin-top: 15px;
+}
+
+#contact{
+  position: block;
+  background-color: #eee;
+  color:#666;
+  border-radius:10px;
+  border:1px solid #fff;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  padding-right:15px;
+  padding-left:15px;
+}
+
+#titre {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue;
+  padding: 12px 0px;
+  border-radius: 4px;
+  width: 100%;
+  display: inline-block;
+  background-image: url(http://localhost/ProjetsWeb/Web/img/montagnes_backheader.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gauche{
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 49%;
+}
+
+#droite{ 
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  width: 49%;
+}
+
+@media screen and (max-width: 640px){ /*Pour un petit écran, la div de droite repasse sous la div de gauche*/
+  #gauche{
+    float: none;
+    width: 100%
+  }
+  #droite{
+    float: none;
+    width: 100%
+  }
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 1px solid #555;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password]:focus {
+  border: 1px solid #555;
+}
+
+input[type=submit] {
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 0px; /*hauteur du bouton*/
+  margin: 10px 0; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px #999;
+  font-weight: bold;
+}
+
+input[type=submit]:active {
+  box-shadow: 0 0px #999;
+  transform: translateY(4px);
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea:focus {
+  border: 1px solid #555;
+}
+/*Fin Partie Contact*/
+
+/*Partie Galerie*/
+#pics {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+#pics2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+  background-color: #4b4b69;
+  font-weight : bold;
+  font-size : 0.8em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+#ajoutergalerie{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 10px 0px; /*hauteur du bouton*/
+  margin: auto;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#supprimergalerie{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  color: white;
+    margin-top: 10px;
+  padding: 10px 0px; /*hauteur du bouton*/
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media screen and (max-width: 772px){ /*Meme taille de bouton que supprimer une photo*/
+  #ajoutergalerie{
+    padding: 18px 0px;
+  }
+}
+@media screen and (max-width: 683px){ /*Pour un petit écran, la div de droite repasse sous la div de gauche*/
+  #ajoutergalerie{
+    padding: 10px 0px;
+  }
+}
+@media screen and (max-width: 640px){ /*Pour un petit écran, la div de droite repasse sous la div de gauche*/
+  #ajoutergalerie{
+    margin-bottom: 5px;
+  }
+  #supprimergalerie{
+    margin-top: 0px;
+  }
+}
+
+#slideshow_amerique_nord {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/amerique_nord.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slideshow_amerique_sud {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/amerique_sud.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slideshow_europe {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/europe.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slideshow_asie {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/asie.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slideshow_afrique {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/afrique.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slideshow_oceanie {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2em;
+  border: 1px solid #ddd;
+  background-image: url(img/oceanie.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ 
+ 
+ 
+/* Dimensions des container */
+.container {
+  position:relative;
+  width: 200px;
+  height: 200px;
+}
+
+.slider {
+  position: absolute;
+  left:0; top:0;
+}
+
+/* Suppression des marges sur les figures */
+figure {
+  position:relative;
+  display:inline-block;
+  padding:0; margin:0;
+}
+
+
+.pics {
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+#menu_photo{
+  height: 30px;
+  width: 30px;
+  margin-left: 1px;
+}
+#liste_photo{
+  padding: 0;
+  margin: 0;
+}
+
+ul#liste_photo img {
+opacity:0;
+-moz-transition:opacity 1s ease-in-out;
+-webkit-transition:opacity 1s ease-in-out;
+-o-transition:opacity 1s ease-in-out;
+transition: opacity 1s ease-in-out;
+}
+ul#liste_photo img:target {
+opacity:1;
+}
+
+#mini_photo{
+  margin-top: 6px;
+  text-align: center;
+}
+
+.flex img {
+  margin-left: 1px;
+  margin-right: 1px;
+  flex: 1 auto;
+  margin-bottom: 5px;
+}
+
+.flex{
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
